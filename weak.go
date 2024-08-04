@@ -2,7 +2,8 @@ package weak
 
 import "unsafe"
 
-// A shorthand for int(unsafe.Sizeof(A))
-func SizeOf(a any) int {
+// A shorthand for getting type size
+func SizeOf[T any]() int {
+	var a T
 	return int(unsafe.Sizeof(a))
 }
