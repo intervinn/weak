@@ -38,3 +38,18 @@ func main() {
 
 ### boxes
 boxes wrap around chunks to hold a single instance of datatype
+```go
+import "github.com/intervinn/weak"
+
+func main() {
+	b, err := weak.NewBox[float32]()
+	if err != nil {
+		panic(err)
+	}
+
+	b.Set(3.14)
+	println(b.Value()) // +3.140000e+000 but thats println issue
+
+	b.Free()
+}
+```
