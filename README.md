@@ -5,6 +5,8 @@ this library is expected to be more unsafe and slow due to usage of syscalls
 almost everything in the library is stack-allocated except for binary endings used to turn values into byte arrays,
 but some day ill find a better alternative
 
+works only on mac and linux
+
 
 ## usage
 
